@@ -63,7 +63,7 @@ def recognise():
     body = {
         'config': {
             'encoding': 'SPEEX_WITH_HEADER_BYTE',
-            'language_code': lang,
+            'language_code': 'tr-TR',
             'sample_rate_hertz': 16000,
             'max_alternatives': 1,
             'enableAutomaticPunctuation': True,
