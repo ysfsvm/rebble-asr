@@ -56,8 +56,6 @@ def recognise():
     access_token, lang = request.host.split('.', 1)[0].split('-', 1)
 
     auth_req = requests.get(f"{AUTH_URL}/api/v1/me/token", headers={'Authorization': f"Bearer {access_token}"})
-    if not auth_req.ok:
-        abort(401)
 
     chunks = iter(list(parse_chunks(stream)))
     content = next(chunks).decode('utf-8')
